@@ -1,15 +1,13 @@
 package com.imooc.service.impl;
 
-import com.imooc.dto.OrderDTO;
-import com.imooc.enums.OrderStatusEnum;
-import com.imooc.service.OrderService;
+import com.anqi.dto.OrderDTO;
+import com.anqi.service.OrderService;
+import com.anqi.service.impl.PushMessageServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by SqMax on 2018/4/2.
