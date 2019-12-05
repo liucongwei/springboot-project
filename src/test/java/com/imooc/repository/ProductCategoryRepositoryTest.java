@@ -23,27 +23,29 @@ public class ProductCategoryRepositoryTest {
 
     @Autowired
     private ProductCategoryRepository repository;
+
     @Test
-    public void findOneTest(){
-        ProductCategory productCategory=repository.findOne(1);
+    public void findOneTest() {
+        ProductCategory productCategory = repository.findOne(1);
         System.out.println(productCategory.toString());
     }
+
     @Test
     @Transactional
-    public void saveTest(){
+    public void saveTest() {
 //        ProductCategory productCategory =repository.findOne(2);
 
 //        productCategory.setCategoryType(5);
-        ProductCategory productCategory=new ProductCategory("女生最爱",3);
-        ProductCategory result=repository.save(productCategory);
+        ProductCategory productCategory = new ProductCategory("女生最爱", 3);
+        ProductCategory result = repository.save(productCategory);
         Assert.assertNotNull(result);
 //        Assert.assertNotEquals(null,result);
     }
 
     @Test
-    public void findByCategoryTypeInTest(){
-        List<Integer> list= Arrays.asList(2,3,4);
-        List<ProductCategory> result=repository.findByCategoryTypeIn(list);
-        Assert.assertNotEquals(0,result.size());
+    public void findByCategoryTypeInTest() {
+        List<Integer> list = Arrays.asList(2, 3, 4);
+        List<ProductCategory> result = repository.findByCategoryTypeIn(list);
+        Assert.assertNotEquals(0, result.size());
     }
 }

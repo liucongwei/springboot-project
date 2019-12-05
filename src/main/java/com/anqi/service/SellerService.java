@@ -10,6 +10,7 @@ public interface SellerService {
 
     /**
      * 通过openid查询
+     *
      * @param openid
      * @return
      */

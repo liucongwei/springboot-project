@@ -21,21 +21,21 @@ public class SellerInfoRepositoryTest {
     private SellerInfoRepository repository;
 
     @Test
-    public void save(){
-        SellerInfo  sellerInfo=new SellerInfo();
+    public void save() {
+        SellerInfo sellerInfo = new SellerInfo();
         sellerInfo.setSellerId(KeyUtil.genUniqueKey());
         sellerInfo.setUsername("admin");
         sellerInfo.setPassword("admin");
         sellerInfo.setOpenid("abc");
 
-        SellerInfo result=repository.save(sellerInfo);
+        SellerInfo result = repository.save(sellerInfo);
         Assert.assertNotNull(result);
     }
 
     @Test
-    public void findByOpenid() throws Exception{
-        SellerInfo result=repository.findByOpenid("abc");
-        Assert.assertEquals("abc",result.getOpenid());
+    public void findByOpenid() throws Exception {
+        SellerInfo result = repository.findByOpenid("abc");
+        Assert.assertEquals("abc", result.getOpenid());
 
     }
 }

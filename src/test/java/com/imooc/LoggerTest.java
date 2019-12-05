@@ -17,14 +17,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Slf4j
 public class LoggerTest {
 
-//    private final Logger logger= LoggerFactory.getLogger(LoggerTest.class);
+    //    private final Logger logger= LoggerFactory.getLogger(LoggerTest.class);
     @Test
-    public void test1(){
-        String name="imooc";
-        String password="123456";
+    public void test1() {
+        String name = "imooc";
+        String password = "123456";
         //要安裝Lombok插件，才能直接用log
         log.debug("debug......");
-        log.info("name: {} , password: {}",name,password);
+        log.info("name: {} , password: {}", name, password);
         log.error("error......");
         log.warn("warning.....");
 

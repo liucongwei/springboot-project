@@ -23,8 +23,8 @@ public class ProductInfoRepositoryTest {
     private ProductInfoRepository repository;
 
     @Test
-    public void save(){
-        ProductInfo productInfo=new ProductInfo();
+    public void save() {
+        ProductInfo productInfo = new ProductInfo();
         productInfo.setProductId("123456");
         productInfo.setProductName("皮蛋粥");
         productInfo.setProductPrice(new BigDecimal(3.2));
@@ -34,13 +34,13 @@ public class ProductInfoRepositoryTest {
         productInfo.setProductStatus(0);
         productInfo.setCategoryType(2);
 
-        ProductInfo result=repository.save(productInfo);
+        ProductInfo result = repository.save(productInfo);
         Assert.assertNotNull(result);
     }
 
     @Test
-    public void findByProductStatus() throws Exception{
-        List<ProductInfo> productInfoList=repository.findByProductStatus(0);
-        Assert.assertNotEquals(0,productInfoList.size());
+    public void findByProductStatus() throws Exception {
+        List<ProductInfo> productInfoList = repository.findByProductStatus(0);
+        Assert.assertNotEquals(0, productInfoList.size());
     }
 }

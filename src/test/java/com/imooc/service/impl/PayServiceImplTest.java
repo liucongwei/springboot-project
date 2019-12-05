@@ -25,14 +25,14 @@ public class PayServiceImplTest {
     private OrderService orderService;
 
     @Test
-    public void create() throws Exception{
-        OrderDTO orderDTO=orderService.findOne("1234561");
+    public void create() throws Exception {
+        OrderDTO orderDTO = orderService.findOne("1234561");
         payService.create(orderDTO);
     }
 
     @Test
-    public void refund(){
-        OrderDTO orderDTO=orderService.findOne("1234561");
+    public void refund() {
+        OrderDTO orderDTO = orderService.findOne("1234561");
         payService.refund(orderDTO);
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * Created by SqMax on 2018/4/1.
  */
 @Service
-public class SellerServiceImpl implements SellerService{
+public class SellerServiceImpl implements SellerService {
 
     @Autowired
     private SellerInfoRepository repository;

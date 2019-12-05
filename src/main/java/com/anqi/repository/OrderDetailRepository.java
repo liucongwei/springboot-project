@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by SqMax on 2018/3/18.
  */
-public interface OrderDetailRepository extends JpaRepository<OrderDetail,String> {
+public interface OrderDetailRepository extends JpaRepository<OrderDetail, String> {
 
     List<OrderDetail> findByOrderId(String orderId);
 }

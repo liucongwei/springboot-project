@@ -24,7 +24,7 @@ public class PushMessageServiceImplTest {
 
     @Test
     public void orderStatus() {
-        OrderDTO orderDTO=orderService.findOne("123456");
+        OrderDTO orderDTO = orderService.findOne("123456");
         pushMessageService.orderStatus(orderDTO);
 
     }

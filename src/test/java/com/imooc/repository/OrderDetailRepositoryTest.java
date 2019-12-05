@@ -23,8 +23,8 @@ public class OrderDetailRepositoryTest {
     private OrderDetailRepository repository;
 
     @Test
-    public void saveTest(){
-        OrderDetail orderDetail=new OrderDetail();
+    public void saveTest() {
+        OrderDetail orderDetail = new OrderDetail();
         orderDetail.setDetailId("1234567810");
         orderDetail.setOrderId("111111111");
         orderDetail.setProductIcon("http://xxx.jpg");
@@ -33,14 +33,15 @@ public class OrderDetailRepositoryTest {
         orderDetail.setProductPrice(new BigDecimal(2.2));
         orderDetail.setProductQuantity(3);
 
-        OrderDetail result=repository.save(orderDetail);
+        OrderDetail result = repository.save(orderDetail);
         Assert.assertNotNull(result);
 
     }
+
     @Test
     public void findByOrderId() {
-        List<OrderDetail> orderDetailList=repository.findByOrderId("111111111");
-        Assert.assertNotEquals(0,orderDetailList.size());
+        List<OrderDetail> orderDetailList = repository.findByOrderId("111111111");
+        Assert.assertNotEquals(0, orderDetailList.size());
 
     }
 }

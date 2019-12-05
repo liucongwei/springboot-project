@@ -12,10 +12,11 @@ import java.util.List;
  * Created by SqMax on 2018/3/17.
  */
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     private ProductCategoryRepository repository;
+
     @Override
     public ProductCategory findOne(Integer categoryId) {
         return repository.findOne(categoryId);
